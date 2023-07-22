@@ -1,0 +1,147 @@
+{
+  "cpp": {
+    "prefix": "cpp",
+    "body": [
+      "#include <bits/stdc++.h>",
+      "#define log(x) cout << x << endl",
+      "#define logfixed(x) cout << fixed << setprecision(10) << x << endl;",
+      "#define all(x) (x).begin(), (x).end()",
+      "using namespace std;",
+      "using lint = long long;",
+      "using Graph = vector<vector<int>>;",
+      "",
+      "int main() {",
+      "  $0",
+      "}",
+      "",
+    ],
+    "description": ""
+  },
+  "ff": {
+    "prefix": "ff",
+    "body": [
+      "for (int $0 = 0; $0 < $1; $0++) {",
+      "  $2",
+      "}",
+    ],
+    "description": ""
+  },
+  "loopitr": {
+    "prefix": "ffitr",
+    "body": [
+      "for(auto itr=$0.begin();itr != $0.end();++itr){",
+      "  int t=*itr; ",
+      "\t$1",
+      "}",
+    ],
+    "description": ""
+  },
+  "combi": {
+    "prefix": "cmbnation",
+    "body": [
+      "lint combi(lint n, lint r) {",
+      "  lint num = 1;",
+      "  for (lint i = 1; i <= r; i++) {",
+      "    num = num * (n - i + 1) / i;",
+      "  }",
+      "  return num;",
+      "}",
+      "",
+    ],
+    "description": ""
+  },
+  "strcount": {
+    "prefix": "strcount",
+    "body": [
+      "lint stringcount(string s, char c) { return count(s.cbegin(), s.cend(), c); }",
+    ],
+    "description": ""
+  },
+  "dnum": {
+    "prefix": "dnum",
+    "body": [
+      "lint dignum(int n) {",
+      "  lint res = 0;",
+      "  while (n > 0) {",
+      "    res++;",
+      "    n /= 10;",
+      "  }",
+      "  return res;",
+      "}",
+    ],
+    "description": ""
+  },
+  "dsum": {
+    "prefix": "dsum",
+    "body": [
+      "lint digsum(int n) {",
+      "  lint res = 0;",
+      "  while (n > 0) {",
+      "    res += n % 10;",
+      "    n /= 10;",
+      "  }",
+      "  return res;",
+      "}",
+    ],
+    "description": ""
+  },
+  "cmax": {
+    "prefix": "cmax",
+    "body": [
+      "template <class T> inline bool chmax(T &a, T b) {",
+      "  if (a < b) {",
+      "    a = b;",
+      "    return 1;",
+      "  }",
+      "  return 0;",
+      "}",
+    ],
+    "description": ""
+  },
+  "cmin": {
+    "prefix": "cmin",
+    "body": [
+      "template <class T> inline bool chmin(T &a, T b) {",
+      "  if (a > b) {",
+      "    a = b;",
+      "    return 1;",
+      "  }",
+      "  return 0;",
+      "}",
+    ],
+    "description": ""
+  },
+  "numtobin": {
+    "prefix": "numtobin",
+    "body": [
+      "for (int x = 9; x >= 0; x--) {",
+      "    int wari = (1 << x);",
+      "    cout << (n / wari) % 2;",
+      "  }",
+    ],
+    "description": ""
+  },
+  "bit_search": {
+    "prefix": "bit_search",
+    "body": [
+      "// n. size",
+      "  // l. list",
+      "  // k. search number",
+      "  bool ans = false;",
+      "  for (int i = 0; i < (1 << n); i++) {",
+      "    int sum = 0;",
+      "    for (int j = 0; j < n; j++) {",
+      "      int wari = (1 << (j));",
+      "      if ((i / wari) % 2 == 1) {",
+      "        sum += l[j];",
+      "      }",
+      "    }",
+      "    log(sum);",
+      "    if (sum == k) {",
+      "      ans = true;",
+      "    }",
+      "  }",
+    ],
+    "description": ""
+  },
+}

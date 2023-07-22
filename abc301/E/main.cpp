@@ -6,4 +6,8 @@ using namespace std;
 using lint = long long;
 using Graph = vector<vector<int>>;
 
-int main() {}
+int main() {
+  int n;
+  cin>>n;
+  for(int i=0;i
+}
